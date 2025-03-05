@@ -1,0 +1,5 @@
+tsconfig.json
+package.json
+package-lock.json
+node_modules
+docker-compose.yml

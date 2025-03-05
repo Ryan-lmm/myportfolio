@@ -72,6 +72,7 @@ section.sobre-section {
 
 .sobre-text {
   width: 50%;
+  color: var(--nd-text)
 }
 
 .sobre-text>h1 {
@@ -236,5 +237,6 @@ section.sobre-section {
   .sobre-text {
     padding: 2% 5%;
     width: 100%;
+
   }
 }
