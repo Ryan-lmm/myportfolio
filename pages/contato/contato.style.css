@@ -1,0 +1,258 @@
+:root {
+  --main-bg: #111111;
+  --nd-text: #555555;
+  --main-text: #00AEEF;
+  --main-font: "Inter", serif;
+  --nd-font: "Josefin Sans", serif;
+}
+
+.darkmode {
+  background-color: var(--main-bg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.hide {
+  display: none;
+}
+
+
+nav.nav-header {
+  padding: 2rem;
+}
+
+.nav-container {
+  color: var(--nd-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container>h3.logo {
+  font-family: var(--nd-font);
+  font-size: 1.5rem;
+
+}
+
+.nav-container>.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container>ul.nav-list:first-child {
+  display: none;
+}
+
+.nav-container>.nav-list>li>a {
+  padding: 0 1rem;
+  text-decoration: none;
+  color: var(--main-text);
+  font-family: var(--main-font)
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+section.contato {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.contato-text {
+  padding: 2rem 0;
+  flex: 1;
+}
+
+.contato-text>h1 {
+  font-family: var(--nd-font);
+  font-size: 2.9rem;
+  padding: 15px 0;
+}
+
+.contato-text>p {
+  font-family: var(--main-font)
+}
+
+.contato-btns {
+  padding: 2rem 0;
+}
+
+.contato-btns>a.btn-email {
+  background-color: var(--main-text);
+  padding: 5px;
+  border-radius: 5px;
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333333;
+  width: 20px
+}
+
+.contato-btns>a.btn-linkedin {
+  background-color: var(--main-text);
+  padding: 5px;
+  border-radius: 5px;
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: white;
+  border: 1px solid #333333;
+  width: 20px;
+}
+
+.contato-btns>a.btn-linkedin:active {
+  background-color: #00aeefa1;
+}
+
+.contato-btns>a.btn-email:active {
+  background-color: #00aeefa1;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: .4s;
+}
+
+.off {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: .4s;
+  image-rendering: pixelated;
+  opacity: 1;
+}
+
+.on {
+  position: absolute;
+  content: "";
+  height: 2em;
+  width: 2em;
+  background-color: white;
+  transition: .4s;
+  image-rendering: pixelated;
+  opacity: 0;
+}
+
+.switch input:checked+.slider {
+  background-color: #111111;
+}
+
+.switch input:focus+.slider {
+  box-shadow: 0 0 1px #fff;
+}
+
+.switch input:checked~.off {
+  transform: translateX(2em);
+}
+
+.switch input:checked~.on {
+  transform: translateX(2em);
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  nav.nav-header {
+    display: none;
+  }
+
+
+  .menu-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .menu-mobile>h3.logo {
+    font-family: var(--nd-font);
+    font-size: 1.5rem;
+    color: var(--nd-text)
+  }
+
+  .nav-mobile {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    backdrop-filter: blur(40px);
+  }
+
+  .close {
+    display: none;
+  }
+
+  .nav-container-mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  ul.nav-list-mobile {
+    list-style-type: none;
+    text-align: center;
+    width: 80%;
+  }
+
+  .nav-list-mobile>li {
+    padding: 5px 0;
+  }
+
+  .nav-list-mobile>li>a {
+    text-decoration: none;
+    font-family: var(--main-font);
+    color: var(--main-text)
+  }
+
+  section.contato {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .contato-text {
+    padding: 2% 5%;
+  }
+
+  .contato-text>h1 {
+    font-size: 2rem;
+    padding-bottom: 15px;
+  }
+
+  .contato-icon {
+    display: none;
+  }
+}
