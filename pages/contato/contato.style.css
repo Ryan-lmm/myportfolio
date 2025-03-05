@@ -73,6 +73,7 @@ section.contato {
 .contato-text {
   padding: 2rem 0;
   flex: 1;
+  color: var(--nd-text)
 }
 
 .contato-text>h1 {
